@@ -1,0 +1,77 @@
+// Import Bootstrap and its default variables
+// You can prefix paths with ~, as displayed above, to resolve modules from node_modules
+@import '~bootstrap/scss/bootstrap.scss';
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+$--brand-primary: #844ed3;
+
+// ======================================
+// CLASSES
+// ======================================
+
+.nav-link {
+  font-size: 1rem !important;
+  padding: 10px;
+
+  &:hover,
+  &:focus {
+    color: $--brand-primary !important;
+  }
+}
+
+button:disabled {
+  --bs-btn-disabled-bg: grey;
+  background-color: var(--bs-btn-disabled-bg);
+  cursor: not-allowed;
+}
+
+.btn[disabled] {
+  border-color: #6c757d;
+}
+
+.app__brandName {
+  color: $--brand-primary;
+  font-size: 3rem;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.app__invoice-page {
+  h1 {
+    border-bottom-color: $--brand-primary !important;
+  }
+  .app__forms {
+    border: 3px solid $--brand-primary !important;
+  }
+}
+
+.app__home {
+  h4 {
+    color: #bbb;
+  }
+}
+
+// ======================================
+// FORMS
+// ======================================
+
+.app__forms {
+  border-width: 3px !important;
+
+  .date-picker {
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+
+    &.error {
+      border-color: #dc3545;
+    }
+  }
+}
